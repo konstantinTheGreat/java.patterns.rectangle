@@ -1,12 +1,14 @@
 package main.java.factory;
 
 
-import main.java.Entities.Point;
-import main.java.Entities.Quadrilateral;
+import main.java.entities.Point;
+import main.java.entities.Quadrilateral;
 import main.java.exception.QuadrilateralException;
 
+import java.io.IOException;
 import java.util.List;
 
 public interface QuadrilateralFactory {
-    List<Quadrilateral> createQuadrilateral(Point[][] pointsArray) throws QuadrilateralException;
+    List<Quadrilateral> createQuadrilaterals(String file) throws QuadrilateralException, IOException;
+    Quadrilateral createQuadrilateral(Point a, Point b, Point c, Point d) throws QuadrilateralException;
 }

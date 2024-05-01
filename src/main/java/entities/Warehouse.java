@@ -1,10 +1,14 @@
-package main.java.Entities;
+package main.java.entities;
+
+import main.java.observer.impl.QuadrilateralObserverImpl;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.StringJoiner;
+import java.util.logging.Logger;
 
 public class Warehouse {
+    private static final Logger logger = Logger.getLogger(QuadrilateralObserverImpl.class.getName());
     private static Warehouse instance = new Warehouse();
     private HashMap<Integer, List<Double>> map = new HashMap<>();
 
@@ -19,8 +23,9 @@ public class Warehouse {
         return map.get(key);
     }
 
-    public List<Double> put(Integer key, List<Double> value) {
-        return map.put(key, value);
+    public void put(Integer key, List<Double> quadrilateralInfo) {
+        logger.info("Info updated:" + key + " Perimeter = " + quadrilateralInfo.get(0) + " Area = " + quadrilateralInfo.get(1));
+        map.put(key, quadrilateralInfo);
     }
 
     @Override

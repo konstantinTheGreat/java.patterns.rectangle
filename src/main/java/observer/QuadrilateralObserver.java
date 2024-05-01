@@ -1,6 +1,6 @@
 package main.java.observer;
 
-import main.java.Entities.Quadrilateral;
+import main.java.entities.Quadrilateral;
 
 public interface QuadrilateralObserver {
     void update(Quadrilateral quadrilateral);

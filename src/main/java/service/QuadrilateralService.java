@@ -1,7 +1,9 @@
 package main.java.service;
 
-import main.java.Entities.Quadrilateral;
+import main.java.entities.Quadrilateral;
 
 public interface QuadrilateralService {
-    float perimeter(Quadrilateral quadrilateral); //not sure
+    double perimeter(Quadrilateral quadrilateral);
+    double area(Quadrilateral quadrilateral);
+    boolean convex(Quadrilateral quadrilateral);
 }

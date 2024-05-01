@@ -1,22 +1,21 @@
-package main.java.Entities;
+package main.java.entities;
 
 public class Point {
-    private final float x;
-    private final float y;
+    private final double x;
+    private final double y;
 
     public Point(float x, float y) {
         this.x = x;
         this.y = y;
     }
 
-    public float getX() {
+    public double getX() {
         return x;
     }
 
-    public float getY() {
+    public double getY() {
         return y;
     }
-
 
     @Override
     public String toString() {
