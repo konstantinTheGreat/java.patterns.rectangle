@@ -15,13 +15,13 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws IOException, QuadrilateralException {
-        String file = "src/resources/points.txt";
-        QuadrilateralFactory factory = new QuadrilateralFactoryImpl();
-        QuadrilateralService service = new QuadrilateralServiceImpl();
+        String file = "src/resources/points.txt";  //route to our txt file
+        QuadrilateralFactory factory = new QuadrilateralFactoryImpl(); // creating quadrilateral factory
+        QuadrilateralService service = new QuadrilateralServiceImpl(); // creating service for quadrilateral
         Warehouse warehouse = Warehouse.getInstance();
-        List<Quadrilateral> quadrilaterals = factory.createQuadrilaterals(file);
+        List<Quadrilateral> quadrilaterals = factory.createQuadrilaterals(file); // created quadrilaterals using factory
 
-        for (Quadrilateral quadrilateral : quadrilaterals) {
+        for (Quadrilateral quadrilateral : quadrilaterals) {        //adding area and perimeter to the warehouse
             double perimeter = service.perimeter(quadrilateral);
             List<Double> data = new ArrayList<>();
             data.add(service.area(quadrilateral));
@@ -29,7 +29,7 @@ public class Main {
             warehouse.put(quadrilateral.getQuadrilateralId(), data);
         }
 
-        Quadrilateral quadrilateral = quadrilaterals.get(1);
+        Quadrilateral quadrilateral = quadrilaterals.get(1);        //updating one of the quadrilaterals
         Point myPoint = new Point(-100,-10);
         quadrilateral.setA(myPoint);
 

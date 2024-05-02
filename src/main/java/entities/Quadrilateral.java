@@ -4,8 +4,6 @@ import main.java.observer.Observable;
 import main.java.observer.QuadrilateralObserver;
 import main.java.observer.impl.QuadrilateralObserverImpl;
 import main.java.util.IdGenerator;
-import java.util.logging.Level;
-import java.util.logging.FileHandler;
 
 import java.util.Objects;
 import java.util.logging.Logger;
