@@ -1,7 +1,7 @@
-package main.java.FileReader.impl;
+package main.java.fileReaderQuadrilateral.impl;
 
-import main.java.FileReader.QuadrilateralParser;
-import main.java.entities.Point;
+import main.java.fileReaderQuadrilateral.QuadrilateralParser;
+import main.java.entity.Point;
 import main.java.validator.QuadrilateralValidator;
 import main.java.validator.impl.QuadrilateralValidatorImpl;
 

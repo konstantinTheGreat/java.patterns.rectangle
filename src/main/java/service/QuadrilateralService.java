@@ -1,6 +1,6 @@
 package main.java.service;
 
-import main.java.entities.Quadrilateral;
+import main.java.entity.Quadrilateral;
 
 public interface QuadrilateralService {
     double perimeter(Quadrilateral quadrilateral);

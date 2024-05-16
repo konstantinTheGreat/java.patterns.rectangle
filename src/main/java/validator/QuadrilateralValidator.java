@@ -1,8 +1,6 @@
 package main.java.validator;
 
-import main.java.entities.Point;
-
-import java.util.List;
+import main.java.entity.Point;
 
 public interface QuadrilateralValidator {
     boolean hasCorrectInput(String[] points);

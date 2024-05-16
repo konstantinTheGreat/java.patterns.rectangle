@@ -1,9 +1,7 @@
 package main.java.validator.impl;
 
-import main.java.entities.Point;
+import main.java.entity.Point;
 import main.java.validator.QuadrilateralValidator;
-
-import java.util.List;
 
 public class QuadrilateralValidatorImpl implements QuadrilateralValidator {
 

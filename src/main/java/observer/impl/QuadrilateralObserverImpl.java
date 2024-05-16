@@ -1,9 +1,9 @@
 package main.java.observer.impl;
 
-import main.java.entities.Quadrilateral;
-import main.java.entities.Warehouse;
+import main.java.entity.Quadrilateral;
+import main.java.entity.Warehouse;
 import main.java.observer.QuadrilateralObserver;
-import main.java.entities.QuadrilateralType;
+import main.java.entity.QuadrilateralType;
 import main.java.service.QuadrilateralService;
 import main.java.service.impl.QuadrilateralServiceImpl;
 

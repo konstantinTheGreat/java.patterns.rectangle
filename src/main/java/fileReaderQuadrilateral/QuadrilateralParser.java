@@ -1,8 +1,7 @@
-package main.java.FileReader;
+package main.java.fileReaderQuadrilateral;
 
-import main.java.entities.Point;
+import main.java.entity.Point;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.List;
 

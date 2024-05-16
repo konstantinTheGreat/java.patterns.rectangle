@@ -1,4 +1,4 @@
-package main.java.entities;
+package main.java.entity;
 
 public class Point {
     private final double x;

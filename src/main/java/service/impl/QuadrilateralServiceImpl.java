@@ -1,6 +1,6 @@
 package main.java.service.impl;
 
-import main.java.entities.Quadrilateral;
+import main.java.entity.Quadrilateral;
 import main.java.observer.impl.QuadrilateralObserverImpl;
 import main.java.service.QuadrilateralService;
 
@@ -15,7 +15,7 @@ public class QuadrilateralServiceImpl implements QuadrilateralService {
 
     @Override
     public double area(Quadrilateral quadrilateral) {
-        Double halfP = perimeter(quadrilateral) / 2;
+        double halfP = perimeter(quadrilateral) / 2;
         return Math.sqrt((halfP * quadrilateral.getSideC())*(halfP - quadrilateral.getSideB()) * (halfP - quadrilateral.getSideA()) * (halfP - quadrilateral.getSideD()));
     }
 

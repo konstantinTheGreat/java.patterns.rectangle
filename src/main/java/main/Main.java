@@ -1,8 +1,8 @@
 package main.java.main;
 
-import main.java.entities.Point;
-import main.java.entities.Quadrilateral;
-import main.java.entities.Warehouse;
+import main.java.entity.Point;
+import main.java.entity.Quadrilateral;
+import main.java.entity.Warehouse;
 import main.java.exception.QuadrilateralException;
 import main.java.factory.QuadrilateralFactory;
 import main.java.factory.impl.QuadrilateralFactoryImpl;
@@ -19,7 +19,7 @@ public class Main {
         QuadrilateralFactory factory = new QuadrilateralFactoryImpl(); // creating quadrilateral factory
         QuadrilateralService service = new QuadrilateralServiceImpl(); // creating service for quadrilateral
         Warehouse warehouse = Warehouse.getInstance();
-        List<Quadrilateral> quadrilaterals = factory.createQuadrilaterals(file); // created quadrilaterals using factory
+        List<Quadrilateral> quadrilaterals = factory.createListQuadrilateral(file); // created quadrilaterals using factory
 
         for (Quadrilateral quadrilateral : quadrilaterals) {        //adding area and perimeter to the warehouse
             double perimeter = service.perimeter(quadrilateral);

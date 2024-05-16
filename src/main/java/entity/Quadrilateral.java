@@ -1,4 +1,4 @@
-package main.java.entities;
+package main.java.entity;
 
 import main.java.observer.Observable;
 import main.java.observer.QuadrilateralObserver;
