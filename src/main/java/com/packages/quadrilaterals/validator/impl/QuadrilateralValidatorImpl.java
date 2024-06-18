@@ -3,12 +3,14 @@ package main.java.com.packages.quadrilaterals.validator.impl;
 import main.java.com.packages.quadrilaterals.entity.Point;
 import main.java.com.packages.quadrilaterals.validator.QuadrilateralValidator;
 
+import static main.java.com.packages.quadrilaterals.constant.Constants.pattern;
+
 public class QuadrilateralValidatorImpl implements QuadrilateralValidator {
 
     @Override
     public boolean hasCorrectInput(String[] points) {
         for (String point : points) {
-            if (!point.matches("-?\\d+,\\s*-?\\d+")) {
+            if (!point.matches(pattern)) {
                 return false;
             }
         }

@@ -7,14 +7,13 @@ import main.java.com.packages.quadrilaterals.fileReaderQuadrilateral.Quadrilater
 import main.java.com.packages.quadrilaterals.fileReaderQuadrilateral.impl.QuadrilateralParserImpl;
 import main.java.com.packages.quadrilaterals.entity.Point;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 
 public class QuadrilateralFactoryImpl implements QuadrilateralFactory {
     @Override
-    public List<Quadrilateral> createListQuadrilateral(String file) throws IOException {
+    public List<Quadrilateral> createListQuadrilateral(String file) throws QuadrilateralException {
         QuadrilateralParser parser = new QuadrilateralParserImpl();
         List<Quadrilateral> quadrilaterals = new ArrayList<>();
         List<Point[]> points = parser.parseQuadrilateralPoints(file);

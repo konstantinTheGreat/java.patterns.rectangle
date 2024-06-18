@@ -1,6 +1,7 @@
 package main.java.com.packages.quadrilaterals.fileReaderQuadrilateral.impl;
 
 import main.java.com.packages.quadrilaterals.entity.Point;
+import main.java.com.packages.quadrilaterals.exception.QuadrilateralException;
 import main.java.com.packages.quadrilaterals.fileReaderQuadrilateral.QuadrilateralParser;
 import main.java.com.packages.quadrilaterals.validator.QuadrilateralValidator;
 import main.java.com.packages.quadrilaterals.validator.impl.QuadrilateralValidatorImpl;
@@ -11,7 +12,7 @@ import java.util.List;
 
 public class QuadrilateralParserImpl implements QuadrilateralParser {
     @Override
-    public List<Point[]> parseQuadrilateralPoints(String file) throws IOException {
+    public List<Point[]> parseQuadrilateralPoints(String file) throws QuadrilateralException {
         QuadrilateralValidator validator = new QuadrilateralValidatorImpl();
         List<Point[]> quadrilaterals = new ArrayList<>();
         File points = new File(file);
@@ -34,6 +35,9 @@ public class QuadrilateralParserImpl implements QuadrilateralParser {
                 }
                 quadrilaterals.add(pointArray);
             }
+
+        } catch (IOException e) {
+            throw new QuadrilateralException(e);
         }
 
         return quadrilaterals;

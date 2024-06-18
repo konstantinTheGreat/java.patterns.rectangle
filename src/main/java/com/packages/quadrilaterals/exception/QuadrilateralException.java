@@ -4,7 +4,6 @@ public class QuadrilateralException extends Exception {
     public QuadrilateralException(){
 
     }
-
     public QuadrilateralException(String message) {
         super(message);
     }
